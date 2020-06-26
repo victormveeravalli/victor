@@ -2,6 +2,8 @@ package com.manage.order.model;
 
 import java.math.BigDecimal;
 
+import lombok.Data;
+@Data
 public class OrderItemsModel {
 
 	private Long orderItemId;
@@ -11,6 +13,8 @@ public class OrderItemsModel {
 	private String productCode;
 
 	private int quantity;
+	
+
 	
 	
 

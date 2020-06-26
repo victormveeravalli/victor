@@ -1,21 +1,20 @@
 package com.manage.order.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
 @Data
-public class OrderModel {
-	@NotNull
+public class OrderModelResponse {
 	private String customerName;
 
 	private String shippingAddress;
 
 	@NotNull
-	private ArrayList<OrderItemsModel> orderItems;
+	private List<OrderItemModel> orderItems;
 
 	private BigDecimal totalPrice;
 
@@ -39,11 +38,11 @@ public class OrderModel {
 		this.shippingAddress = shippingAddress;
 	}
 
-	public ArrayList<OrderItemsModel> getOrderItems() {
+	public List<OrderItemModel> getOrderItems() {
 		return orderItems;
 	}
 
-	public void setOrderItems(ArrayList<OrderItemsModel> orderItems) {
+	public void setOrderItems(List<OrderItemModel> orderItems) {
 		this.orderItems = orderItems;
 	}
 
@@ -63,5 +62,4 @@ public class OrderModel {
 		this.orderDate = orderDate;
 	}
 
-	
 }

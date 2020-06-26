@@ -1,12 +1,15 @@
 package com.manage.order.model;
 
+import lombok.Data;
+
+@Data
 public class OrderItemModel {
 
 	private String productCode;
 
 	private String productName;
 
-	private String quantity;
+	private int quantity;
 
 	public String getProductCode() {
 		return productCode;
@@ -24,11 +27,11 @@ public class OrderItemModel {
 		this.productName = productName;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 

@@ -1,18 +1,19 @@
 package com.manage.order.dto;
 
+import java.math.BigDecimal;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.manage.order.model.OrderModel;
+import lombok.Data;
 
 @Entity
 @Table(name="ORDER_DETAILS")
+@Data
 public class OrderDetails {
 	
 	@Id
@@ -26,6 +27,7 @@ public class OrderDetails {
 	private String productCode;
 	@Column(name="QUANTITY")
 	private int quantity;
+	
 
 	public Long getOrderItemId() {
 		return orderItemId;

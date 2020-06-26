@@ -16,8 +16,11 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import lombok.Data;
+
 @Entity
 @Table(name = "ORDER_ENTITY")
+@Data
 public class OrderEntity {
 
 	@Id

@@ -8,10 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
+import lombok.Data;
+
 
 
 	@Entity
 	@Table(name = "ORDER_ITEMS")
+	@Data
 	public class OrderItemDTO {
 
 	@Id

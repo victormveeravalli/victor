@@ -4,16 +4,18 @@ import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.manage.order.model.OrderItemModel;
 
 
-@FeignClient(value="OrderItemManagementService",url="http://localhost:8082")
+@FeignClient(value="OrderItemManagementService",url="http://localhost:8082/")
 public interface OrderItemClient {
-
 	
-	  @GetMapping(value = "/orderItemsbyCodes/{codes}") 
-	  public OrderItemModel getOrderItem(List<String> codes);
+	 @RequestMapping(method = RequestMethod.GET, value="/orderItemsbyCodes/{codes}")
+	 // @GetMapping(value = "/orderItemsbyCodes/{codes}") 
+	  public List<OrderItemModel> getOrderItem(List<String> codes);
 	 
 
 }

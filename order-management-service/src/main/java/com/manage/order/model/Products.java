@@ -2,6 +2,8 @@ package com.manage.order.model;
 
 import java.math.BigDecimal;
 
+import lombok.Data;
+@Data
 public class Products {
 
 	private Long orderItemId;
@@ -12,7 +14,7 @@ public class Products {
 
 	private int quantity;
 	
-	private BigDecimal price;
+	
 
 	public Long getOrderItemId() {
 		return orderItemId;
@@ -46,12 +48,5 @@ public class Products {
 		this.quantity = quantity;
 	}
 
-	public BigDecimal getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
+	
 }

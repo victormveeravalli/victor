@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.manage.order.dto.OrderEntity;
 import com.manage.order.model.OrderModel;
+import com.manage.order.model.OrderModelResponse;
 import com.manage.order.service.OrderService;
 
 @RestController
@@ -26,7 +27,7 @@ public class OrderController {
 	}
 
 	@GetMapping("/getOrders/{id}")
-	public ResponseEntity<OrderModel> getOrderById(@PathVariable long id) {
+	public ResponseEntity<OrderModelResponse> getOrderById(@PathVariable long id) {
 		return ResponseEntity.ok().body(orderservice.getOrderById(id));
 	}
 
